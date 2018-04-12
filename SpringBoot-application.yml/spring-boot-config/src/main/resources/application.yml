@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+person:
+  lastName: huangxiaoyu
+  age: 11
+  boss: false
+  birth: 2018/04/10
+  map: {k1: v1,k2: v2}
+  list:
+    - zhangsan
+    - lisi
+  dog:
+    name: wangcai
+    age: 1

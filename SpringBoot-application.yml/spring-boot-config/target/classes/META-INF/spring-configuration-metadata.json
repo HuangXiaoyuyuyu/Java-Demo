@@ -1,0 +1,47 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person",
+      "type": "org.hxy.springboot.bean.Person"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person.birth",
+      "type": "java.util.Date"
+    },
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person.boss",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person.dog",
+      "type": "org.hxy.springboot.bean.Dog"
+    },
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person.last-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person.list",
+      "type": "java.util.List<java.lang.Object>"
+    },
+    {
+      "sourceType": "org.hxy.springboot.bean.Person",
+      "name": "person.map",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>"
+    }
+  ]
+}
