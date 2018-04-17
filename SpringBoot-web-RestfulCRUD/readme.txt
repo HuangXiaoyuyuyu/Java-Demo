@@ -1,0 +1,1 @@
+该Demo是用SpringBoot完成的一个Restful风格的CRUD，进一步了解SpringBoot以及SpringBoot的web开发，使用的模板引擎是Thymeleaf.如有疑问可以留言。
