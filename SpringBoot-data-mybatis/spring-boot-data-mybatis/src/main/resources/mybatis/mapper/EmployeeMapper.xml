@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="springbootdatamybatis.mapper.EmployeeMapper">
+    <!--
+         public Employee getEmpById(Integer id);
+
+         public int insertEmp(Employee employee);
+    -->
+    <select id="getEmpById" resultType="springbootdatamybatis.bean.Employee">
+        select * from employee where id = #{id}
+    </select>
+</mapper>
