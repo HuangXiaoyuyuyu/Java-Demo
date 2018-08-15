@@ -1,0 +1,2 @@
+这是一个SpringBoot整合rabbitmq的demo 主要利用docker安装rabbitmq 并配置映射端口，
+然后对路由 队列以及绑定的配置，如有疑问，欢迎留言~
