@@ -1,0 +1,3 @@
+org\hxy\provider\ProviderTicketApplication.class
+org\hxy\provider\controller\TicketController.class
+org\hxy\provider\service\TicketService.class
