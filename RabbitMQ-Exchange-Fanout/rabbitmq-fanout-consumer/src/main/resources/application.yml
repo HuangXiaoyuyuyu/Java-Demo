@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: rabbitmq-fanout-consumer
+  rabbitmq:
+    host: 192.168.1.187
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      direct:
+        retry:
+          enabled: true   #开启重试
+          max-attempts: 5 #重试次数 默认为三
+
+#设置交换机的名称
+mq.config.exchange: order.fanout
+#短信服务队列的名称
+mq.config.queue.sms: order.sms
+#push服务队列的名称
+mq.config.queue.push: order.push
+
