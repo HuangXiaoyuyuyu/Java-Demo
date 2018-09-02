@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: rabbitmq-topic-provider
+  rabbitmq:
+    host: 192.168.1.187
+    port: 5672
+    username: guest
+    password: guest
+
+#设置交换器的名称
+mq.config.exchange: log.topic
