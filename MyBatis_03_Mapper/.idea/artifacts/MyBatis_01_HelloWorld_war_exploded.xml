@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MyBatis_01_HelloWorld:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyBatis_01_HelloWorld_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MyBatis_01_HelloWorld/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MyBatis_01_HelloWorld" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../Jars/ssh（struts2.1.6+hibernate3.3+spring2.5.6）/mysql-connector-java-5.1.7-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../Jars/mybatis/mybatis-3.4.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../Jars/mybatis/log4j-1.2.17.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../Jars/mybatis/log4j.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../Jars/Junit/org.hamcrest.core_1.3.0.v201303031735.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../../Jars/Junit/junit.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
