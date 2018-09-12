@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.hxy.mybatis.dao.EmployeeMapper">
+
+    <!--
+        cache:
+            eviction:缓存回收策略
+                •LRU –最近最少使用的：移除最长时间不被使用的对象。
+                •FIFO –先进先出：按对象进入缓存的顺序来移除它们。
+                •SOFT –软引用：移除基于垃圾回收器状态和软引用规则的对象。
+                •WEAK –弱引用：更积极地移除基于垃圾收集器状态和弱引用规则的对象。
+                •默认的是LRU
+            flushInterval:缓存刷新间隔
+                缓存多少长时间清空一次，默认不清空，设置一个毫秒值
+            readOnly:是否只读
+                true：只读;mybatis认为所有从缓存中获取数据的操作都是只读操作，不会修改数据
+                           mybatis为了加快获取速度，直接就会将数据缓存中的引用交给用户，不安全，速度快
+                false：非只读;mybatis觉得获取的数据可能会被修改。
+                        mybatis会利用序列化&反序列化的技术克隆一份新的数据给你。安全，速度慢。
+            size:缓存存放多少元素
+            type:指自定义缓存的全类名
+                    实现Cache接口即可
+    -->
+    <cache eviction="LRU" flushInterval="60000" readOnly="false" size="1024" ></cache>
+    <!--public Map<Integer,Employee> getEmpByLastNameLikeReturnMap(String lastName);-->
+    <select id="getEmpByLastNameLikeReturnMap" resultType="emp" >
+        select * from tb1_employee where last_name like #{lastName}
+    </select>
+
+    <!-- public Map<String,Object> getEmpByIdReturnMap(Integer id);-->
+    <select id="getEmpByIdReturnMap" resultType="map">
+        select * from tb1_employee where id = #{id}
+    </select>
+
+    <!-- public List<Employee> getEmpsByLastNameLike(String lastName);-->
+    <!-- resultType：如果返回的是一个集合，要写集合中元素的类型 -->
+    <select id="getEmpsByLastNameLike" resultType="emp">
+        select * from tb1_employee where last_name like #{lastName}
+    </select>
+
+    <!--public Employee getEmployeeByMap(Map<String,Object> map);-->
+    <select id="getEmployeeByMap" resultType="emp" databaseId="mysql" >
+        select * from ${tableName} where id = #{id} and last_name = #{lastName}
+    </select>
+
+    <!--
+        namespace:名称空间;指定为接口的全类名
+        id:标签唯一标识
+        resultType：返回值类型
+        #{id}:从传递过来的参数中取出id值
+
+        public Employee getEmployeeById(Integer id);
+    -->
+
+    <select id="getEmployeeById" resultType="Emp" databaseId="mysql">
+        select * from tb1_employee where id = #{id}
+    </select>
+
+    <select id="getEmployeeByIdAndByName" resultType="Emp" databaseId="mysql">
+        select * from tb1_employee where id = #{id} and last_name = #{lastName}
+    </select>
+
+    <!--public void addEmployee(Employee employee);-->
+    <!--parameterType:可以省略
+        获取自增主键值：
+                mysql支持自增主键，自增主键的获取，mybatis也是利用statement.getGeneratedKeys();
+                useGeneratedKeys="true";使用自增主键获取主键值策略
+                keyProperty：指定对应主键属性，也就是mybatis获取到主键值以后，将这个值封装给javaBean的哪个属性
+    -->
+    <insert id="addEmployee" parameterType="org.hxy.mybatis.bean.Employee"
+        useGeneratedKeys="true" keyProperty="id">
+        insert into tb1_employee(last_name, gender, email)
+          values (#{lastName},#{email},#{gender})
+    </insert>
+
+
+    <!--public void updateEmployee(Employee employee);-->
+    <update id="updateEmployee" parameterType="org.hxy.mybatis.bean.Employee">
+        update tb1_employee
+            set last_name=#{lastName},gender=#{gender},email=#{email}
+                where id = #{id}
+    </update>
+
+
+    <!--public void deleteEmployeeById(Integer id);-->
+    <delete id="deleteEmployeeById">
+        delete from tb1_employee
+            where id = #{id}
+    </delete>
+</mapper>
