@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="MySSM">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/c3p0-0.9.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/com.springsource.net.sf.cglib-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/com.springsource.org.aopalliance-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/commons-logging-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/mybatis-3.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/mybatis-spring-1.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/mysql-connector-java-5.1.37-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-aop-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-aspects-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-beans-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-context-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-core-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-expression-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-jdbc-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-orm-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-tx-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-web-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/spring-webmvc-4.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/taglibs-standard-impl-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Jars/ssm(spring4+springmvc4+mybatis3.4.1)/taglibs-standard-spec-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
