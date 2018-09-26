@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jstl">
+    <CLASSES>
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/jar/jstl.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/jar/standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>
