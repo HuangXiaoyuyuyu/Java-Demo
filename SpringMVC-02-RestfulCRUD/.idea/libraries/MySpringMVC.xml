@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="MySpringMVC">
+    <CLASSES>
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/classmate-0.8.0.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/com.springsource.net.sf.cglib-2.2.0.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/com.springsource.org.aopalliance-1.0.0.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/commons-fileupload-1.2.1.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/commons-io-2.0.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/commons-logging-1.1.3.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/hibernate-validator-5.0.0.CR2.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/hibernate-validator-annotation-processor-5.0.0.CR2.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/jackson-annotations-2.1.5.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/jackson-core-2.1.5.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/jackson-databind-2.1.5.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/jboss-logging-3.1.1.GA.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/jstl.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-aop-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-aspects-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-beans-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-context-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-core-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-expression-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-jdbc-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-orm-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-tx-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-web-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/spring-webmvc-4.0.0.RELEASE.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/standard.jar!/" />
+      <root url="jar://D:/学习资料/JavaEE视频/jar包/springmvc/validation-api-1.1.0.CR1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

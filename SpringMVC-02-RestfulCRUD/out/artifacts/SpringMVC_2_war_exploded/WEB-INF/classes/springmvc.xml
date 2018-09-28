@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <context:component-scan base-package="org.hxy.springmvc" />
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+    <mvc:default-servlet-handler />
+    <mvc:annotation-driven conversion-service="conversionService" />
+
+    <!--配置ConversionService-->
+    <bean name="conversionService"
+          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+            <property name="converters">
+                <set>
+                    <ref bean="employeeConverter"></ref>
+                </set>
+            </property>
+    </bean>
+
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="i18n"></property>
+        <property name="defaultEncoding" value="GBK"></property>
+    </bean>
+    <!--
+    <mvc:view-controller path="/i18n" view-name="i18n"></mvc:view-controller>
+    -->
+    <mvc:view-controller path="/i18n2" view-name="i18n2"></mvc:view-controller>
+
+    <bean id="localeResolver"
+          class="org.springframework.web.servlet.i18n.SessionLocaleResolver"></bean>
+
+    <mvc:interceptors>
+        <!-- 自定义拦截器  -->
+        <bean class="org.hxy.springmvc.interceptors.FirstInterceptor"></bean>
+        <!-- 配置拦截器（不）作用路径 -->
+        <mvc:interceptor>
+           <!-- <mvc:exclude-mapping path=""></mvc:exclude-mapping>-->
+            <mvc:mapping path="/emps"/>
+            <bean class="org.hxy.springmvc.interceptors.SecondInterceptor"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/emps"/>
+            <bean class="org.hxy.springmvc.interceptors.ThirdInterceptor"></bean>
+        </mvc:interceptor>
+        
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+    </mvc:interceptors>
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"></property>
+        <property name="maxUploadSize" value="1024000"></property>
+    </bean>
+</beans>
