@@ -1,0 +1,2 @@
+这是一个整合了SpringBoot、MyBatisPlus和Shiro的一个大型demo。
+主要实现了Shiro的认证 MD5加密 Shiro的授权，多个图片文件的上传、下载。

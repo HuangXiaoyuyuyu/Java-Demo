@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SpringBoot_MybatisPlus.mapper.UserMapper">
+
+    <resultMap type="SpringBoot_MybatisPlus.bean.User" id="UserMap">
+        <id property="id" column="id"/>
+        <result property="loginName" column="login_name"/>
+        <result property="nickName" column="nick_name"/>
+        <result property="icon" column="icon"/>
+        <result property="password" column="password"/>
+        <result property="salt" column="salt"/>
+        <result property="tel" column="tel"/>
+        <result property="email" column="email"/>
+        <result property="locked" column="locked"/>
+        <result property="create_date" column="create_date" />
+        <result property="update_date" column="update_date" />
+        <result property="is_admin" column="is_admin"/>
+        <result property="del_flag" column="del_flag"/>
+        <!--<collection property="roles" resultMap="SpringBoot_MybatisPlus.mapper.RoleMapper.RoleMap" />-->
+        <collection property="roles" ofType="SpringBoot_MybatisPlus.bean.Role">
+            <id property="rid" column="rid" />
+            <result property="rname" column="rname" />
+            <collection property="menus" ofType="SpringBoot_MybatisPlus.bean.Menu">
+                <id property="mid" column="mid" />
+                <result property="mname" column="mname" />
+            </collection>
+        </collection>
+    </resultMap>
+
+
+    <select id="findUserByMap" parameterType="java.util.Map" resultMap="UserMap">
+        select t_u.id,
+               t_u.login_name,
+               t_u.nick_name,
+               t_u.icon,
+               t_u.password,
+               t_u.salt,
+               t_u.tel,
+               t_u.email,
+               t_r.rname,
+               t_m.mname
+        from tbl_user t_u
+        left join tbl_user_role t_u_r on t_u_r.uid = t_u.id
+        left join tbl_role t_r on t_r.rid = t_u_r.rid
+        left join tbl_role_menu t_r_m on t_r_m.rid = t_r.rid
+        left join tbl_menu t_m on  t_m.mid = t_r_m.mid
+        where t_u.login_name = #{login_name}
+    </select>
+</mapper>

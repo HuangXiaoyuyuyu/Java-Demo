@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SpringBoot_MybatisPlus.mapper.RoleMapper">
+
+    <resultMap id="RoleMap" type="SpringBoot_MybatisPlus.bean.Role">
+        <id property="rid" column="rid" />
+        <result property="rname" column="rname" />
+        <collection property="menus" ofType="SpringBoot_MybatisPlus.bean.Menu">
+            <id property="mid" column="mid" />
+            <result property="mname" column="mname" />
+        </collection>
+    </resultMap>
+
+</mapper>

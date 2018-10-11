@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img th:src="${session.icon}" style="width: 100px;height: 100px">
+    <h1>欢迎<shiro:principal></shiro:principal>,请选择你的操作：</h1>
+    <ul>
+        <shiro:hasPermission name="sys:user:add"><li><a href="#">增加</a></li></shiro:hasPermission>
+        <shiro:hasPermission name="sys:user:delete"><li><a href="#">删除</a></li></shiro:hasPermission>
+        <shiro:hasPermission name="sys:user:update"><li><a href="#">修改</a></li></shiro:hasPermission>
+        <shiro:hasPermission name="sys:user:query"><li><a href="#">查询</a></li></shiro:hasPermission>
+
+        <shiro:hasRole name="admin">
+            AAAAAAAAA
+            <a href="/aaa">去找aaa</a>
+        </shiro:hasRole>
+        <br>
+        <shiro:hasRole name="customer">
+            BBBBBBBB
+        </shiro:hasRole>
+    </ul>
+    <a th:href="@{/download/}+${session.upload}"><h3 th:text="${session.upload}"></h3></a>
+    <h2><a href="/logout123">点我退出</a></h2>
+</body>
+</html>

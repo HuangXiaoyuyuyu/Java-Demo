@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="login_form" th:action="@{/login_form}" method="post"> <!--th:action="@{/login_form}"-->
+        <div>
+            <input id="login_name" name="login_name" placeholder="用户名"  type="text"
+                   autocomplete="off">
+            <span id="usernameText"></span>
+        </div>
+        <div>
+            <input id="login_password" name="login_password" placeholder="密码"  type="password"
+                   autocomplete="off">
+            <span id="passwordText"></span>
+        </div>
+        <div>
+            <input type="checkbox" name="rememberMe" title="记住帐号?">记住帐号?
+        </div>
+        <button>登录</button><a th:href="@{/register}">点击注册</a>
+    </form>
+</body>
+</html>
