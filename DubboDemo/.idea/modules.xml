@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/order-service-consumer/order-service-consumer.iml" filepath="$PROJECT_DIR$/order-service-consumer/order-service-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/public-resources/public-resources.iml" filepath="$PROJECT_DIR$/public-resources/public-resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service-provider/user-service-provider.iml" filepath="$PROJECT_DIR$/user-service-provider/user-service-provider.iml" />
+    </modules>
+  </component>
+</project>
